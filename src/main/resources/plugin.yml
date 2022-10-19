@@ -1,0 +1,6 @@
+name: Abyss
+version: 1.0.0
+description: Abyss Minecraft Plugin
+author: Revo & Torress
+
+main: com.rtp.Plugin
