@@ -1,5 +1,8 @@
 package com.rtp.gui;
 
-class GuiManager {
+import com.google.inject.Singleton;
+
+@Singleton
+public class GuiManager {
 
 }

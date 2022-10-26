@@ -1,5 +1,8 @@
 package com.rtp.domain;
 
-class AbyssService {
+import com.google.inject.Singleton;
+
+@Singleton
+public class AbyssService {
 
 }

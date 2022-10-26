@@ -1,5 +1,8 @@
 package com.rtp.listener;
 
-class GroundItemListener {
+import com.google.inject.Singleton;
+
+@Singleton
+public class GroundItemListener {
 
 }
