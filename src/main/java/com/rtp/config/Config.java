@@ -1,5 +1,7 @@
 package com.rtp.config;
 
-class Config {
+import com.google.inject.Singleton;
 
+@Singleton
+public class Config {
 }

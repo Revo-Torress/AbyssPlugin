@@ -1,5 +1,8 @@
 package com.rtp.command;
 
-class CommandExecutor {
+import com.google.inject.Singleton;
+
+@Singleton
+public class CommandExecutor {
 
 }
