@@ -7,7 +7,6 @@ import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Item;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.scheduler.BukkitRunnable;
 
 import java.util.stream.Stream;
 
@@ -19,7 +18,7 @@ class GroundItemRunnable implements Runnable {
         getItemsFromGround();
     }
 
-    private void getItemsFromGround(){
+    private void getItemsFromGround() {
         World world = Bukkit.getWorld("world");
         Stream.of(world.getLoadedChunks())
                 .forEach(chunk -> Stream.of(chunk.getEntities())
@@ -27,7 +26,7 @@ class GroundItemRunnable implements Runnable {
     }
 
     private void addToAbyss(Entity entity) {
-        if(isDroppedItem(entity)){
+        if (isDroppedItem(entity)) {
             Item item = (Item) entity;
             ItemStack itemStack = item.getItemStack();
             System.out.println("Moved to abyss: " + itemStack.getType() + " " + itemStack.getAmount());
