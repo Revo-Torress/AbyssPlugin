@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Singleton
-public class Abyss {
+class Abyss {
     private List <AbyssItem> abyssItems;
     private boolean open;
 

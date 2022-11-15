@@ -1,5 +1,6 @@
 package com.rtp.domain;
 
+import com.google.inject.Inject;
 import com.google.inject.Singleton;
 import org.bukkit.Material;
 
@@ -9,7 +10,7 @@ import java.util.List;
 @Singleton
 public class AbyssService {
     private final Abyss abyss;
-
+    @Inject
     public AbyssService(Abyss abyss) {
         this.abyss = abyss;
     }
@@ -47,7 +48,7 @@ public class AbyssService {
         for(int x = page * 25 ; x < ((page + 1) * 25 ); x++){
             try{
                 result.add(abyssItems.get(x));
-            } catch (Exception exception){
+            } catch (IndexOutOfBoundsException exception){
                 break;
             }
         }
