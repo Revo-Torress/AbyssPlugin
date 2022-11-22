@@ -1,0 +1,7 @@
+#############
+# R&T ABYSS #
+# V1.0.0    #
+#############
+
+#DEFINE SCHEDULING TIME FOR ABYSS (in minutes)
+time: 10

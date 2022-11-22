@@ -55,4 +55,7 @@ public class AbyssService {
         return result;
     }
 
+    public void clear() {
+        abyss.clear();
+    }
 }
