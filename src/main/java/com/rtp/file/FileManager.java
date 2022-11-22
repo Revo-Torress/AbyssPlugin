@@ -1,4 +1,4 @@
-package com.rtp.config;
+package com.rtp.file;
 
 import com.google.inject.Singleton;
 import com.rtp.Plugin;

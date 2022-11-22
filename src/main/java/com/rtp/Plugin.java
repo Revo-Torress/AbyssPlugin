@@ -4,7 +4,7 @@ import com.google.inject.AbstractModule;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import com.rtp.command.AbyssCommandExecutor;
-import com.rtp.config.FileManager;
+import com.rtp.file.FileManager;
 import com.rtp.listener.GroundItemManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
