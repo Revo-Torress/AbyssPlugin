@@ -1,6 +1,7 @@
 package com.rtp.listener;
 
 import com.google.inject.Singleton;
+import com.rtp.domain.AbyssService;
 import org.bukkit.Bukkit;
 import org.bukkit.World;
 import org.bukkit.entity.Entity;
@@ -13,6 +14,12 @@ import java.util.stream.Stream;
 @Singleton
 class GroundItemRunnable implements Runnable {
 
+    private final AbyssService abyssService;
+
+    GroundItemRunnable(AbyssService abyssService) {
+        this.abyssService = abyssService;
+    }
+
     @Override
     public void run() {
         getItemsFromGround();
@@ -20,6 +27,7 @@ class GroundItemRunnable implements Runnable {
 
     private void getItemsFromGround() {
         World world = Bukkit.getWorld("world");
+        abyssService.clear();
         Stream.of(world.getLoadedChunks())
                 .forEach(chunk -> Stream.of(chunk.getEntities())
                         .forEach(entity -> addToAbyss(entity)));
@@ -29,7 +37,7 @@ class GroundItemRunnable implements Runnable {
         if (isDroppedItem(entity)) {
             Item item = (Item) entity;
             ItemStack itemStack = item.getItemStack();
-            System.out.println("Moved to abyss: " + itemStack.getType() + " " + itemStack.getAmount());
+            abyssService.addItem(itemStack.getType(), itemStack.getAmount());
         }
     }
 

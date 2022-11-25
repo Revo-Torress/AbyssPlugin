@@ -6,11 +6,6 @@ author: Revo & Torress
 main: com.rtp.Plugin
 
 commands:
-  AbyssOpen:
-    description: "Abyss Opened"
-    aliases: [ao]
-    usage: "Abyss can not be opened"
-  AbyssClose:
-    description: "Abyss Closed"
-    aliases: [ac]
-    usage: "Abyss can not be closed"
+  abyss:
+    description: Abyss main command
+    usage: Type /abyss to open abyss!

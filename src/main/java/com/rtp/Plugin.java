@@ -4,6 +4,7 @@ import com.google.inject.AbstractModule;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import com.rtp.command.AbyssCommandExecutor;
+import com.rtp.file.FileManager;
 import com.rtp.listener.GroundItemManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -18,6 +19,8 @@ public class Plugin extends JavaPlugin {
         getLogger().info("Enabling Abyss plugin!");
         injector.getInstance(GroundItemManager.class).listen();
         getCommand("abyss").setExecutor(injector.getInstance(AbyssCommandExecutor.class));
+        FileManager fileManager = injector.getInstance(FileManager.class);
+        fileManager.checkFiles();
     }
 
     public Injector getInjector() {

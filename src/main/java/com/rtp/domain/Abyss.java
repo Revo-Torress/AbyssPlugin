@@ -26,5 +26,9 @@ class Abyss {
     public void setOpen(boolean open) {
         this.open = open;
     }
+
+    public void clear(){
+        abyssItems = new ArrayList<>();
+    }
 }
 
